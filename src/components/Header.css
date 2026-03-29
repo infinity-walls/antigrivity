@@ -124,7 +124,10 @@
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .status-text {
     display: none;
+  }
+  .header-status {
+    padding: 8px;
   }
 }

@@ -13,11 +13,6 @@ const Header = ({ isDark, toggleTheme }) => {
           <span className="logo-text">Nexus</span>
         </div>
 
-        <div className="header-status">
-          <div className="status-dot"></div>
-          <span className="status-text">Live Sync • Wallhaven Datastream</span>
-        </div>
-
         <div className="actions">
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
             {isDark ? <Sun size={20} /> : <Moon size={20} />}

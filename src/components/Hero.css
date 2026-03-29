@@ -54,6 +54,7 @@
   font-size: 1.05rem;
   padding: 0 16px;
   outline: none;
+  min-width: 0;
 }
 
 .search-input::placeholder {
@@ -76,4 +77,21 @@
   transform: scale(1.02);
   background: var(--accent-primary);
   color: white;
+}
+
+@media (max-width: 600px) {
+  .search-wrapper {
+    padding: 6px 6px 6px 14px;
+    height: 50px;
+  }
+  
+  .search-input {
+    font-size: 0.9rem;
+    padding: 0 12px;
+  }
+  
+  .btn-search {
+    padding: 0 16px;
+    font-size: 0.9rem;
+  }
 }
