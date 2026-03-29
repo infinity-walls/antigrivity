@@ -12,14 +12,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateZ(0);
   width: 600px;
   height: 600px;
   background: radial-gradient(circle, rgba(255, 94, 126, 0.18) 0%, rgba(255, 179, 71, 0.15) 50%, rgba(0, 0, 0, 0) 70%);
   border-radius: 50%;
   z-index: -1;
-  filter: blur(60px);
+  filter: blur(40px);
   pointer-events: none;
+  will-change: transform;
 }
 
 .search-wrapper {
@@ -30,7 +31,7 @@
   display: flex;
   align-items: center;
   padding: 6px 6px 6px 20px;
-  transition: var(--transition);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: var(--shadow-lg);
   width: 100%;
 }

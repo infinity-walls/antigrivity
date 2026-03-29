@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CategoryFilter from './components/CategoryFilter';
@@ -59,9 +59,9 @@ function App() {
 
   const toggleTheme = () => setIsDark(!isDark);
   
-  const handleLoadMore = () => {
+  const handleLoadMore = useCallback(() => {
     if (!isLoading && hasMore) setPage(p => p + 1);
-  };
+  }, [isLoading, hasMore]);
 
   return (
     <>
